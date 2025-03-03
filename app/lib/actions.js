@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { supabase } from "./supabase";
 import { redirect } from "next/navigation";
+import { signIn, signOut } from "@/auth";
 
 export async function addToCartAction (newData) {
    
@@ -72,4 +73,12 @@ export async function deleteOrder (id) {
 
    revalidatePath('/order')
    
+}
+
+export async function SignIn () {
+   await signIn('google', { redirectTo: '/cart' })
+}
+
+export async function LogOut () {
+   await signOut({ redirectTo: '/' })
 }

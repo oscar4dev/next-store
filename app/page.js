@@ -13,15 +13,15 @@ export default async function Page() {
   return (
     <main className="lg:w-[1024px] lg:mx-auto relative">
       <div
-        className="h-[400px] w-full flex flex-col items-center justify-center gap-2"
+        className="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 h-[400px] w-full flex flex-col items-center justify-center gap-2 dark:text-slate-900"
       >
         <h1 className="text-xl font-bold">The Next-Store</h1>
         <p>Ecommerce Template</p>
         <p>Built by Oscar4dev using Next.js</p>
-        <Link 
-          href={ 'https://github.com/oscar4dev' }
+        <Link
+          href={'https://github.com/oscar4dev'}
           target="_blank"
-          className="flex items-center gap-2 border border-slate-900 rounded-full px-4 py-1 text-sm hover:bg-slate-100 duration-[0.5s] ease-in-out dark:border dark:border-slate-50 dark:hover:text-slate-50 dark:hover:bg-slate-700"
+          className="mt-8 flex items-center justify-center gap-2 rounded-full w-[300px] py-2 text-sm bg-blue-500 text-slate-50 hover:opacity-80 duration-300 ease-in-out dark:bg-slate-800"
         >
           <span>View on GitHub</span>
           <span className="text-lg"><FaGithub /></span>
@@ -29,20 +29,20 @@ export default async function Page() {
       </div>
 
       <div className="px-4">
-        <div>
+        <div className="pt-8">
           <p className="flex justify-between mb-8">
             <span
               className="text-lg"
             >Latest Drops</span>
-            <Link 
-              href={ '/menu' }
+            <Link
+              href={'/menu'}
               className="text-blue-500 hover:underline"
             >
               View all &#8599;
             </Link>
           </p>
 
-          <Suspense fallback={ <Spinner /> }>
+          <Suspense fallback={<Spinner />}>
             <LatestDrops />
           </Suspense>
         </div>
@@ -52,16 +52,16 @@ export default async function Page() {
             <span
               className="text-lg"
             >Weekly Picks</span>
-            <Link 
-              href={ '/menu' }
+            <Link
+              href={'/menu'}
               className="text-blue-500 hover:underline"
             >View all &#8599;</Link>
           </p>
 
-          <Suspense fallback={ <Spinner /> }>
+          <Suspense fallback={<Spinner />}>
             <WeeklyPicks />
           </Suspense>
-          
+
         </div>
 
         <div className="mt-20">
@@ -69,18 +69,18 @@ export default async function Page() {
             <span
               className="text-lg"
             >Hot Sales</span>
-            <Link 
-              href={ '/menu' }
+            <Link
+              href={'/menu'}
               className="text-blue-500 hover:underline"
             >View all &#8599;</Link>
           </p>
 
-          <Suspense>
+          <Suspense fallback={<Spinner />}>
             <HotSales />
           </Suspense>
         </div>
 
-      </div> 
+      </div>
 
       <footer className="mt-14 py-8 px-4 border-t">
         <Footer />

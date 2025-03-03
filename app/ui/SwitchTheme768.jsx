@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegLightbulb } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa";
  
-export default function SwitchTheme() {
+export default function SwitchTheme768() {
 
    const [theme, setTheme] = useState('light')
 
@@ -31,7 +31,7 @@ export default function SwitchTheme() {
                   <FaLightbulb /> 
                </span>
                : <FaRegLightbulb />
-         } Switch Theme
+         }
       </button>
    )
 }
