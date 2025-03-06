@@ -98,7 +98,7 @@ export default function Navigation({ session }) {
          {
             isOpen && <ul
                ref={ref}
-               className="z-30 fixed top-[82px] right-1 rounded-md bottom-3 bg-blue-500 w-1/2 p-4 flex flex-col gap-8 dark:bg-slate-800"
+               className="z-30 fixed top-[82px] right-2 rounded-md bottom-3 bg-blue-500 w-1/2 p-4 flex flex-col gap-8 dark:bg-slate-800"
             >
                <li className="mt-4">
                   <Link href={'/'}

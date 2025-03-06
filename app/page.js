@@ -13,9 +13,9 @@ export default async function Page() {
   return (
     <main className="lg:w-[1024px] lg:mx-auto relative">
       <div
-        className="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 h-[400px] w-full flex flex-col items-center justify-center gap-2 dark:text-slate-900"
+        className="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 h-[500px] w-full flex flex-col items-center justify-center gap-2 dark:text-slate-900"
       >
-        <h1 className="text-xl font-bold">The Next-Store</h1>
+        <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-fuchsia-500 to-pink-800">The Next-Store</h1>
         <p>Ecommerce Template</p>
         <p>Built by Oscar4dev using Next.js</p>
         <Link
